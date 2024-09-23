@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* BARRA SUPERIOR */
+
+  
+ion-toolbar {
+  --background: #9CAFAA; /* Color de fondo de la barra de herramientas */
+}
+
+.title {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color: #fff; /* Color del texto */
+  font-weight: 500; /* Ajusta el grosor si es necesario */
+  font-size: 40px; /* Tamaño del texto */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el título */
+}
+
+
+.logo-container {
+  width: 50px; /* Establece el tamaño del contenedor */
+  height: 50px;
+  border-radius: 20%; /* Redondea el contenedor */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.logo {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: 100%; /* Mantiene la proporción dentro del contenedor */
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción de la imagen */
+}
+
+
+--------------------------------
+registro-container
+
+------------------------------------------------------------------------------------------------
+.foto {
+  width: 100%; /* La imagen se ajusta al ancho del contenedor */
+  height: 100%; /* La altura será el 100% del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+  padding: 10px; /* Añade un espacio interno alrededor de la imagen */
+  
+}
+
+.title2 {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color:#9CAFAA; /* Color del texto */
+  font-weight: 500; /* Ajusta el grosor si es necesario */
+  font-size: 40px; /* Tamaño del texto */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+  
+  /* Estilo para el contenido */
+  ion-content {
+    padding: 16px; /* Espaciado alrededor del contenido */
+  }
+  
+  /* Estilo para los elementos del formulario */
+  ion-item {
+    margin-bottom: 20px; /* Espacio inferior entre los elementos del formulario */
+    padding: 10; /* Elimina el espaciado interno del ion-item */
+  }
+  
+
+  
+  /* Estilo para los botones */
+  ion-button {
+    width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    margin-top: 16px; /* Espacio superior entre los botones */
+    --background: #EFBC9B;
+    --padding-start: 12px; /* Espaciado interno del botón */
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 18px; /* Tamaño de la fuente en los botones */
+    text-transform: none;
+  }
+    
+  ion-button:last-of-type {
+    margin-top: 16px; /* Espacio superior más grande para el último botón */
+    --background: #EFBC9B; /* Color de fondo del botón */
+    --color: #fff; /* Color del texto del botón */
+  }
+  /* Estilo adicional para el contenedor del botón */
+  div {
+    text-align: center; /* Centrar el contenido dentro del div */
+  }
+
+  .subtitle {
+    font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+    font-size: 1rem; /* Tamaño de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+    color: #e0b39c; /* Color del texto */
+    margin-bottom: 25px; /* Espacio inferior para mayor separación */
+}
+
+
+  ion-label.custom-label {
+    font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+    font-size: 1.7rem; /* Tamaño de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+    color: #9CAFAA; /* Color del texto */
+    margin-bottom: 25px; /* Espacio inferior para mayor separación */
+  }
+  ion-input {
+    --padding-start: 10px; /* Espaciado interno del input */
+    --padding-end: 10px; /* Espaciado interno del input */
+    --padding-top: 10px; /* Espaciado interno del input */
+    --padding-bottom: 10px; /* Espaciado interno del input */
+    font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+    font-size: 18px; /* Tamaño del texto dentro del input */
+  }
+  
+
+.login-container {
+  background-color: #FBF3D5; /* Orange color */
+  padding: 20px;
+}
+
+.ion-modal.registro-container {
+  background-color: #FBF3D5; /* Orange color */
+  padding: 20px;
+}
+
+.foto-container {
+  width: 100%; /* Abarca el 100% del ancho del contenedor */
+  height: auto;
+  max-height: 600px; /* Puedes ajustar esta altura máxima a tus necesidades */
+  overflow: hidden; /* Recorta cualquier parte de la imagen que sobrepase el área definida */
+  margin-bottom: 20px; /* Añade un margen para separar la imagen del contenido */
+}
+
+.foto {
+  width: 100%; /* La imagen se ajusta al ancho del contenedor */
+  height: 100%; /* La altura será el 100% del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+  padding: 10px; /* Añade un espacio interno alrededor de la imagen */
+  animation: scaleUpDown 4s ease-in-out infinite; /* Aplica la animación */
+}
+
+@keyframes scaleUpDown {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta un poco el tamaño (10%) */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño normal */
+  }
+}

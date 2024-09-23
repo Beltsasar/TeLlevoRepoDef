@@ -1,0 +1,112 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+/* Ajustes de márgenes para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos del formulario */
+  }
+  
+/* BARRA SUPERIOR */
+ion-toolbar {
+  --background: #9CAFAA; /* Color de fondo de la barra de herramientas */
+}
+
+.title {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color: #fff; /* Color del texto */
+  font-size: 40px; /* Tamaño del texto */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.header {
+display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el título */
+}
+
+.logo-container {
+  width: 50px; /* Establece el tamaño del contenedor */
+height: 50px;
+  border-radius: 20%; /* Redondea el contenedor */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.logo {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: 100%; /* Mantiene la proporción dentro del contenedor */
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción de la imagen */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.login-container {
+  background-color: #FBF3D5; /* Color de fondo */
+  padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+
+/* Contenedor del formulario */
+/* Contenedor principal */
+.login-container {
+    background-color: #FBF3D5; /* Fondo del contenedor */
+    padding: 20px; /* Espaciado alrededor del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 500px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+  }
+
+/* Estilo para los items del formulario */
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 15px; /* Espaciado entre los campos del formulario */
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+ion-label {
+    font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    color: #9CAFAA; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+    display: block; /* Asegura que la etiqueta ocupe todo el ancho */
+  }
+/* Estilo para los inputs */
+ion-input {
+    --padding-start: 10px; /* Padding interno en el inicio */
+    --padding-end: 10px; /* Padding interno en el final */
+    --padding-top: 10px; /* Padding interno en la parte superior */
+    --padding-bottom: 10px; /* Padding interno en la parte inferior */
+    --background: #ffffff; /* Fondo blanco */
+    --border-radius: 8px; /* Bordes redondeados para el input */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+    font-size: 16px; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+  }
+/* Estilo para los botones */
+ion-button {
+    --background: #EFBC9B; /* Color de fondo de los botones */
+    --color: white; /* Color del texto en los botones */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+    font-size: 18px; /* Tamaño del texto en los botones */
+    margin-top: 20px; /* Espaciado superior */
+  }
+
+/* Asegúrate de que los botones se expandan completamente */
+ion-button[expand="full"] {
+  --border-radius: 10px; /* Bordes redondeados para los botones */
+}
+
+/* Responsividad: Ajusta el tamaño del formulario en pantallas pequeñas */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 10px; /* Menos espaciado en pantallas pequeñas */
+  }
+
+  ion-button {
+    font-size: 16px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+}

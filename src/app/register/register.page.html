@@ -1,0 +1,52 @@
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <div class="logo-container">
+        <ion-img src="../assets/img/logo.jpg" class="logo"></ion-img>
+      </div>
+      <h1 class="title">Te llevo</h1>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content class="ion-padding">
+    <div class="login-container">
+  <form>
+
+    
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input placeholder="Ingresa tu nombre" name="lblnombre" required [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input placeholder="Ingresa tus apellidos" name="lblapellidos" required  [(ngModel)]="apellidos"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" placeholder="Ingresa tu correo electrónico" name="lblemail" required [(ngModel)]="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingresa tu contraseña" name="lblpassword" required [(ngModel)]="password"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" placeholder="Confirma tu contraseña" name="lblconfirmPassword" required [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item>
+    
+    <ion-button (click)="validar()" expand="full" type="submit" color="primary">Registrar</ion-button>
+    <ion-button [routerLink]="['/login']" expand="full">Volver</ion-button>
+
+  </form>
+  </div>
+</ion-content>
+

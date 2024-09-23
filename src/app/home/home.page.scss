@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* BARRA SUPERIOR */
+ion-toolbar {
+  --background: #9CAFAA; /* Color de fondo de la barra de herramientas */
+}
+
+.title {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color: #fff; /* Color del texto */
+  font-weight: 500; /* Ajusta el grosor si es necesario */
+  font-size: 40px; /* Tamaño del texto */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el título */
+}
+
+.logo-container {
+  width: 50px; /* Establece el tamaño del contenedor */
+  height: 50px;
+  border-radius: 20%; /* Redondea el contenedor */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+.logo {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: 100%; /* Mantiene la proporción dentro del contenedor */
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción de la imagen */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.login-container {
+  background-color: #FBF3D5; /* Color de fondo */
+  padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+/* Etiqueta de bienvenida */
+ion-label.custom-label {
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 1.7rem; /* Tamaño de la fuente */
+  font-weight: 400; /* Grosor de la fuente */
+  color: #9CAFAA; /* Color del texto */
+  margin-bottom: 25px; /* Espacio inferior */
+}
+
+/* Estilo para los botones */
+ion-button {
+  width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+  margin-top: 16px; /* Espacio superior entre los botones */
+  --background: #EFBC9B; /* Color de fondo del botón */
+  --padding-start: 12px; /* Espaciado interno del botón */
+  font-family: "Yusei Magic", sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 18px; /* Tamaño de la fuente en los botones */
+  text-transform: none; /* No transformar el texto */
+}
+
+ion-button:last-of-type {
+  margin-top: 16px; /* Espacio superior más grande para el último botón */
+  --background: #EFBC9B; /* Color de fondo del botón */
+  --color: #fff; /* Color del texto del botón */
+}
+
+/* Contenedor del botón */
+div {
+  text-align: center; /* Centrar el contenido dentro del div */
+}
+
+/* Contenedor del formulario */
+ion-item {
+  margin-bottom: 16px; /* Espacio inferior entre los elementos del formulario */
+}
+
+/* Estilo para los inputs */
+ion-input {
+  --padding-start: 10px; /* Espaciado interno del input */
+  --padding-end: 10px; /* Espaciado interno del input */
+  --padding-top: 10px; /* Espaciado interno del input */
+  --padding-bottom: 10px; /* Espaciado interno del input */
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 18px; /* Tamaño del texto dentro del input */
+}
+
+
+
+/* Estilo para el ion-card-title (título) */
+ion-card-title {
+  color: #9CAFAA; /* Cambia este valor para ajustar el color del texto del título */
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 24px; /* Ajusta el tamaño de la fuente del título si es necesario */
+}
+
+/* Estilo para el texto dentro del ion-card-content */
+ion-card-content p {
+  color: #9CAFAA; /* Cambia este valor para ajustar el color del texto */
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
+}
+
+/* Estilo para el ion-icon */
+ion-card-content ion-icon {
+  color: #9CAFAA; /* Cambia este valor para ajustar el color del icono */
+  font-size: 48px; /* Ajusta el tamaño del icono si es necesario */
+}
+
+.login-container h1 {
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 2.2rem; /* Tamaño de la fuente para el título */
+  font-weight: 700; /* Grosor del título */
+  font-style: normal; /* Estilo de la fuente */
+  color: #EFBC9B; /* Color del título */
+  margin-bottom: 20px; /* Espacio inferior del título */
+  text-align: center; /* Centrar el texto del título */
+}
+
+.login-container p {
+  font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+  font-size: 1.5rem; /* Tamaño de la fuente para el párrafo */
+  font-weight: 400; /* Grosor del párrafo */
+  font-style: normal; /* Estilo de la fuente */
+  color: #9CAFAA; /* Color del texto */
+  margin-bottom: 25px; /* Espacio inferior del párrafo */
+  text-align: center; /* Centrar el texto del párrafo */
+}
