@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./Pages/Pasajero/HomePasajero/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -21,11 +21,31 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./Pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./Pages/Pasajero/PerfilPasajero/perfil.module').then( m => m.PerfilPageModule)
   },
   {
     path: 'ajustes',
-    loadChildren: () => import('./Pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
+    loadChildren: () => import('./Pages/Pasajero/ajustesPasajero/ajustes.module').then( m => m.AjustesPageModule)
+  },
+  {
+    path: 'buscar-auto',
+    loadChildren: () => import('./Pages/Pasajero/buscar-auto/buscar-auto.module').then( m => m.BuscarAutoPageModule)
+  },
+  {
+    path: 'home-conductor',
+    loadChildren: () => import('./Pages/Conductor/home-conductor/home-conductor.module').then( m => m.HomeConductorPageModule)
+  },
+  {
+    path: 'ajustes-conductor',
+    loadChildren: () => import('./Pages/Conductor/ajustes-conductor/ajustes-conductor.module').then( m => m.AjustesConductorPageModule)
+  },
+  {
+    path: 'perfil-conductor',
+    loadChildren: () => import('./Pages/Conductor/perfil-conductor/perfil-conductor.module').then( m => m.PerfilConductorPageModule)
+  },
+  {
+    path: 'ofrecer-ruta',
+    loadChildren: () => import('./Pages/Conductor/ofrecer-ruta/ofrecer-ruta.module').then( m => m.OfrecerRutaPageModule)
   },
 ];
 
