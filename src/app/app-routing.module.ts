@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'ofrecer-ruta',
     loadChildren: () => import('./Pages/Conductor/ofrecer-ruta/ofrecer-ruta.module').then( m => m.OfrecerRutaPageModule)
   },
+  {
+    path: 'historial-pasajero',
+    loadChildren: () => import('./Pages/Pasajero/historial-pasajero/historial-pasajero.module').then( m => m.HistorialPasajeroPageModule)
+  },
 ];
 
 @NgModule({
