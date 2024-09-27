@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historial de Viajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de viajes pasados -->
+  <ion-list>
+    <!-- Ejemplo de viaje 1 -->
+    <ion-item>
+      <ion-label>
+        <h2>Origen: Calle Falsa 123 → Destino: Plaza Mayor</h2>
+        <p>Fecha: 20/09/2024</p>
+        <p>Costo: $10.50</p>
+      </ion-label>
+      <ion-button fill="outline" color="primary" slot="end">
+        Ver Detalles
+      </ion-button>
+    </ion-item>
+
+    <!-- Ejemplo de viaje 2 -->
+    <ion-item>
+      <ion-label>
+        <h2>Origen: Av. Siempre Viva → Destino: Parque Central</h2>
+        <p>Fecha: 15/09/2024</p>
+        <p>Costo: $8.00</p>
+      </ion-label>
+      <ion-button fill="outline" color="primary" slot="end">
+        Ver Detalles
+      </ion-button>
+    </ion-item>
+
+    <!-- Ejemplo de viaje 3 -->
+    <ion-item>
+      <ion-label>
+        <h2>Origen: Terminal de Buses → Destino: Estación Central</h2>
+        <p>Fecha: 10/09/2024</p>
+        <p>Costo: $12.75</p>
+      </ion-label>
+      <ion-button fill="outline" color="primary" slot="end">
+        Ver Detalles
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje para cuando no hay viajes -->
+  <ng-template #noViajesTemplate>
+    <div class="no-viajes">
+      <ion-label>No tienes viajes recientes.</ion-label>
+    </div>
+  </ng-template>
+</ion-content>

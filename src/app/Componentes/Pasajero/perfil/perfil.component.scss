@@ -1,0 +1,80 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: #f8f8f8; /* Color de fondo del header */
+}
+
+.logo-container {
+    margin-right: 8px; /* Espacio entre logo y título */
+}
+
+.logo {
+    width: 50px; /* Ancho del logo */
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+/* Título */
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px; /* Tamaño del título */
+    color: #333; /* Color del texto del título */
+}
+
+/* Contenedor de Login */
+.login-container {
+    padding: 16px; /* Espaciado interno del contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo del Item de Perfil */
+.profile-item {
+    display: flex; /* Usar flexbox para alinear elementos */
+    align-items: center; /* Alinear verticalmente */
+    padding: 16px; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 16px; /* Espacio entre los items */
+}
+
+/* Estilo de la Imagen de Perfil */
+.profile-avatar {
+    margin-right: 16px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-avatar img {
+    width: 60px; /* Ancho de la imagen de perfil */
+    height: 60px; /* Altura de la imagen de perfil */
+    border-radius: 50%; /* Hacer la imagen circular */
+}
+
+/* Estilo de la Información del Perfil */
+ion-label h2 {
+    font-family: 'Yusei Magic', sans-serif; /* Fuente para el nombre */
+    font-size: 20px; /* Tamaño del nombre */
+    color: #555; /* Color del texto del nombre */
+    margin: 0; /* Eliminar margen por defecto */
+}
+
+ion-label p {
+    font-size: 14px; /* Tamaño del texto */
+    color: #777; /* Color del texto */
+    margin-top: 4px; /* Espacio superior */
+}
+
+/* Estilos para los Botones */
+ion-button {
+    margin-top: 12px; /* Espacio superior entre botones */
+}
+
+ion-button:hover {
+    background-color: #007bff; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+}

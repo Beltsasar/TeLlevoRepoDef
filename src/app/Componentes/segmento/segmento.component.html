@@ -1,0 +1,30 @@
+<ion-segment [(ngModel)]="selectedSegment">
+  <ion-segment-button value="home" (click)="cambiarSegmento('home')">
+    Home
+  </ion-segment-button>
+  <ion-segment-button value="perfil" (click)="cambiarSegmento('perfil')">
+    Perfil
+  </ion-segment-button>
+  <ion-segment-button value="historial" (click)="cambiarSegmento('historial')">
+    Historial
+  </ion-segment-button>
+  <ion-segment-button value="ajustes" (click)="cambiarSegmento('ajustes')">
+    Ajustes
+  </ion-segment-button>
+</ion-segment>
+
+<ng-container *ngIf="selectedSegment === 'home'">
+  <app-home-pasajero (cambiarSegmento)="cambiarSegmento($event)"></app-home-pasajero>
+</ng-container>
+
+<ng-container *ngIf="selectedSegment === 'perfil'">
+  <app-perfil></app-perfil>
+</ng-container>
+
+<ng-container *ngIf="selectedSegment === 'historial'">
+  <app-historial></app-historial>
+</ng-container>
+
+<ng-container *ngIf="selectedSegment === 'ajustes'">
+  <app-ajustos></app-ajustos>
+</ng-container>
