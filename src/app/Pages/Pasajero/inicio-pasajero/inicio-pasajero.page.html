@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio Pasajero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <!-- Sección de perfil del pasajero -->
+  <ion-card class="profile-card">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../assets/img/pasajero.jpg" alt="Foto del pasajero">
+      </ion-avatar>
+      <ion-label>
+        <h2>María López</h2>
+        <p>Pasajero desde 2021</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Saldo disponible -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mi Saldo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Saldo disponible: $50.000</h3>
+      <ion-button expand="block" color="tertiary" [routerLink]="['/agregar-saldo']">
+        Agregar Saldo
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Viajes recientes -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Viajes Recientes</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <h2>Destino: Centro Comercial</h2>
+            <p>Conductor: Juan Pérez</p>
+            <p>Fecha: 25 Sep, 16:00</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2>Destino: Aeropuerto</h2>
+            <p>Conductor: Ana Gómez</p>
+            <p>Fecha: 22 Sep, 10:30</p>
+          </ion-label>
+        </ion-item>
+        <!-- Más viajes -->
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de acción principales -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="success" [routerLink]="['/buscar-viaje']">
+          Buscar Viaje
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="primary" [routerLink]="['/index']">
+Volver        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

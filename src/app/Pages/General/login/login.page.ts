@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Asegúrate de importar Router aquí
 import { ToastController } from '@ionic/angular'; // Importa ToastController
-import { userDatabase } from '../../user-database'; // Asegúrate de importar el diccionario
+import { userDatabase } from '../../../user-database'; // Asegúrate de importar el diccionario
 
 @Component({
   selector: 'app-login',

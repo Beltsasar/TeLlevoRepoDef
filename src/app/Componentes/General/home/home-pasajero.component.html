@@ -17,17 +17,9 @@
       <ion-img src="assets/img/map-placeholder.jpg" alt="mapa"></ion-img>
     </ion-card-content>
   </ion-card>
+    <ion-button expand="block" (click)="irAConductor()">Conductor</ion-button>
+    <ion-button expand="block" (click)="irAPasajero()">Pasajero</ion-button>
 
-  <!-- Sección de opciones de viaje -->
-  <ion-grid>
-    <ion-row>
-      <!-- Botón para solicitar viaje -->
-      <ion-col size="12">
-        <ion-button expand="full" color="primary" (click)="solicitarViaje()">
-          Solicitar Viaje
-        </ion-button>
-      </ion-col>
-    </ion-row>
 
     <!-- Navegación del Segmento -->
     <ion-row>
@@ -53,5 +45,5 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  
 </ion-content>

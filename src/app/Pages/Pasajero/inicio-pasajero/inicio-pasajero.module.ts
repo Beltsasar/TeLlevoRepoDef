@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IndexCPageRoutingModule } from './index-c-routing.module';
+import { InicioPasajeroPageRoutingModule } from './inicio-pasajero-routing.module';
 
-import { IndexCPage } from './index-c.page';
+import { InicioPasajeroPage } from './inicio-pasajero.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IndexCPageRoutingModule
+    InicioPasajeroPageRoutingModule
   ],
-  declarations: [IndexCPage]
+  declarations: [InicioPasajeroPage]
 })
-export class IndexCPageModule {}
+export class InicioPasajeroPageModule {}

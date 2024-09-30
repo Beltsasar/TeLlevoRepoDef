@@ -4,32 +4,26 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'index-p',
+    redirectTo: 'index',
     pathMatch: 'full'
   },
   {
     path: 'login',
-    loadChildren: () => import('./Pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'index-p',
-    loadChildren: () => import('./Pages/index-p/index-p.module').then( m => m.IndexPPageModule)
-  },
-  {
-    path: 'buscar-viaje',
-    loadChildren: () => import('./buscar-viaje/buscar-viaje.module').then( m => m.BuscarViajePageModule)
-  },
-  {
-    path: 'index-c',
-    loadChildren: () => import('./Pages/index-c/index-c.module').then( m => m.IndexCPageModule)
+    loadChildren: () => import('./Pages/General/login/login.module').then( m => m.LoginPageModule)
   },
 
-
-
+  {
+    path: 'inicio-conductor',
+    loadChildren: () => import('./Pages/Conductor/inicio-conductor/inicio-conductor.module').then( m => m.InicioConductorPageModule)
+  },
+  {
+    path: 'index',
+    loadChildren: () => import('./Pages/General/index/index.module').then( m => m.IndexPageModule)
+  },
+  {
+    path: 'inicio-pasajero',
+    loadChildren: () => import('./Pages/Pasajero/inicio-pasajero/inicio-pasajero.module').then( m => m.InicioPasajeroPageModule)
+  }
 ];
 
 @NgModule({

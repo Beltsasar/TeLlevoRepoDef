@@ -24,4 +24,11 @@ export class HomePasajeroComponent {
   irAHistorial() {
     this.cambiarSegmento.emit('historial'); 
 }
+irAConductor() {
+  this.router.navigate(['/inicio-conductor']); // Redirigir a la página de "Conductor"
+}
+
+irAPasajero() {
+  this.router.navigate(['/inicio-pasajero']); // Redirigir a la página de "Pasajero"
+}
 }
