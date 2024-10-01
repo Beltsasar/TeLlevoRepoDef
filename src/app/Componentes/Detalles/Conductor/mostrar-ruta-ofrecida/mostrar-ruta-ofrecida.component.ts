@@ -10,5 +10,9 @@ export class MostrarRutaOfrecidaComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+  verDetallesRuta() {
+    // Lógica para navegar a los detalles de la ruta
+    console.log('Ver detalles de ruta');
+  }
 
 }
