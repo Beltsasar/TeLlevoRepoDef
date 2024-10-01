@@ -1,0 +1,44 @@
+/* Estilos para el título del card */
+ion-card-title {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para la lista */
+ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px 0; /* Margen entre elementos */
+    background-color: #f9f9f9; /* Color de fondo */
+    transition: background-color 0.3s; /* Transición para el fondo */
+}
+
+/* Cambiar el color de fondo al pasar el mouse */
+li:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los botones */
+ion-button {
+    margin-left: 10px; /* Espacio a la izquierda de los botones */
+    --background: #007bff; /* Color de fondo del botón */
+    --color: white; /* Color del texto del botón */
+}
+
+/* Cambiar el color de fondo al pasar el mouse sobre los botones */
+ion-button:hover {
+    --background: #0056b3; /* Color de fondo al pasar el mouse */
+}

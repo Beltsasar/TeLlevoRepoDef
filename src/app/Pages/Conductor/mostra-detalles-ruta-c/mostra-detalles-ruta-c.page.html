@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mostrar Ruta Ofrecida</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="index"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Detalles de la Ruta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles de la Ruta</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Origen: Calle Falsa 123</h3>
+      <h3>Destino: Avenida Siempre Viva 742</h3>
+
+      <h3>Conductor: Juan Pérez</h3>
+      <h3>Capacidad: 4 pasajeros</h3>
+      <h3>Precio estimado: $10.000 CLP</h3>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <app-mostrar-posibles-pasajeros></app-mostrar-posibles-pasajeros>
+    </ion-card-header>
+    <ion-card-content>
+ 
+    </ion-card-content>
+  </ion-card>
+</ion-content>

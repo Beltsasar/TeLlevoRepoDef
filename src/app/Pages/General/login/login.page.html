@@ -31,6 +31,8 @@
             name="email"
             required
             [(ngModel)]="Correo"
+            (keydown)="enterPresionado($event)"
+
           ></ion-input>
         </ion-item>
 
@@ -44,6 +46,7 @@
         name="password"
         required
         [(ngModel)]="Contrasena"
+        (keydown)="enterPresionado($event)"
       ><ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
     </ion-item>

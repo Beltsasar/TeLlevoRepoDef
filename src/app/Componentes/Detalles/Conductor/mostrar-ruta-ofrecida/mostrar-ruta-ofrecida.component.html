@@ -2,15 +2,20 @@
   <ion-card-content>
     <div class="viaje-resumen">
       <ion-label class="resumen">
-        <h2 *ngIf="!viajeOfrecido">Ningún viaje ofrecido</h2>
-        <div *ngIf="viajeOfrecido">
-          <h3>Origen: {{ viaje.origen }}</h3>
-          <h3>Destino: {{ viaje.destino }}</h3>
-          <h3>Fecha: {{ viaje.fechaSalida | date:'mediumDate' }}</h3>
-          <h3>Hora: {{ viaje.horaSalida | date:'shortTime' }}</h3>
+        <div *ngIf="viajeOfrecido; else noViajes">
+          <h3>Origen: Calle Falsa 123</h3>
+          <h3>Destino: Avenida Siempre Viva 742</h3>
+          <h3>Fecha: {{ fechaSalida | date:'mediumDate' }}</h3>
+          <h3>Hora: {{ horaSalida | date:'shortTime' }}</h3>
         </div>
+        <ng-template #noViajes>
+          <h3>No tienes viajes ofrecidos...</h3>
+          <ion-button [routerLink]="['/form-ofrecer-ruta']">
+            Ofrecer viaje
+          </ion-button>
+        </ng-template>
       </ion-label>
-      <ion-button *ngIf="viajeOfrecido" fill="outline" slot="end" (click)="verDetallesRuta()">
+      <ion-button *ngIf="viajeOfrecido" [routerLink]="['/mostra-detalles-ruta-c']">
         Ver detalles de ruta
       </ion-button>
     </div>

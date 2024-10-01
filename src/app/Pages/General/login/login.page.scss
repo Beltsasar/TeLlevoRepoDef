@@ -157,3 +157,14 @@ registro-container
     transform: scale(1); /* Vuelve al tamaño normal */
   }
 }
+
+.toast {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgba(56, 128, 255, 0.9);
+  color: rgb(184, 20, 20);
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicioConductorPageRoutingModule } from './inicio-conductor-routing.module';
 
 import { InicioConductorPage } from './inicio-conductor.page';
+import { MostrarRutaOfrecidaComponent } from 'src/app/Componentes/Detalles/Conductor/mostrar-ruta-ofrecida/mostrar-ruta-ofrecida.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { InicioConductorPage } from './inicio-conductor.page';
     IonicModule,
     InicioConductorPageRoutingModule
   ],
-  declarations: [InicioConductorPage]
+  declarations: [InicioConductorPage,MostrarRutaOfrecidaComponent]
 })
 export class InicioConductorPageModule {}

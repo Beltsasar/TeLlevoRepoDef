@@ -18,6 +18,14 @@ export class LoginPage {
     private router: Router,
     private toastController: ToastController
   ) {}
+
+  enterPresionado(event : KeyboardEvent){
+    if(event.key === 'Enter'){
+      this.validarDatos()
+    }
+    
+  }
+
   async validarDatos() {
     const correoValido = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.Correo);
     if (!correoValido) {
@@ -35,7 +43,7 @@ export class LoginPage {
     if (usuarioEncontrado && usuarioEncontrado.password === this.Contrasena) {
 
       console.log('Usuario y contraseña correctos');
-      this.router.navigate(['/index-p']);
+      this.router.navigate(['/index']);
 
     } else {
       console.log('Credenciales incorrectas');
@@ -47,9 +55,9 @@ export class LoginPage {
 
   async presentToast(message: string) {
     const toast = await this.toastController.create({
-      message: message,
+            message: message,
       duration: 2000,
-      position: 'bottom' 
+      position: 'top', 
     });
     toast.present();
   }
@@ -83,5 +91,6 @@ export class LoginPage {
     }
     return null; 
   }
+  
   
 }

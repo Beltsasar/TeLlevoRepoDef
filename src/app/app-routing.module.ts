@@ -23,7 +23,17 @@ const routes: Routes = [
   {
     path: 'inicio-pasajero',
     loadChildren: () => import('./Pages/Pasajero/inicio-pasajero/inicio-pasajero.module').then( m => m.InicioPasajeroPageModule)
+  },
+  {
+    path: 'form-ofrecer-ruta',
+    loadChildren: () => import('./Pages/Conductor/form-ofrecer-ruta/form-ofrecer-ruta.module').then( m => m.FormOfrecerRutaPageModule)
+  },
+
+  {
+    path: 'mostra-detalles-ruta-c',
+    loadChildren: () => import('./Pages/Conductor/mostra-detalles-ruta-c/mostra-detalles-ruta-c.module').then( m => m.MostraDetallesRutaCPageModule)
   }
+
 ];
 
 @NgModule({
