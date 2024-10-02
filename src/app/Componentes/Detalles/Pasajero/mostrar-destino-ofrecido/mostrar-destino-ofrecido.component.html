@@ -1,0 +1,31 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Destino Ofrecido</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <!-- Resumen de la información -->
+    <ion-item>
+      <ion-label>Destino:</ion-label>
+      <ion-text>{{ destino }}</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Lugar de Origen:</ion-label>
+      <ion-text>{{ origen }}</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hora de Partida:</ion-label>
+      <ion-text>{{ horaPartida }}</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de Partida:</ion-label>
+      <ion-text>{{ fechaPartida }}</ion-text>
+    </ion-item>
+
+    <!-- Botón para ver más detalles -->
+    <ion-button expand="block" (click)="verDetalles()">Ver Detalles</ion-button>
+  </ion-card-content>
+</ion-card>
