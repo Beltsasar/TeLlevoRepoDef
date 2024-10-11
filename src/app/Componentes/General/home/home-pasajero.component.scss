@@ -1,25 +1,18 @@
-/* Contenedor para los botones */
-.button-container {
-  display: flex; /* Usar flexbox */
-  justify-content: center; /* Centrar los botones horizontalmente */
-  margin: 20px 0; /* Margen superior e inferior */
+:host {
+  display: block;
+  height: 100%; // Asegura que el componente ocupe toda la altura disponible
 }
 
-/* Estilo para los botones cuadrados */
-.square-button {
-  height: 150px; /* Altura del botón */
-  width: 160px; /* Anchura del botón */
-  display: flex; /* Usar flexbox para centrar el texto */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  font-size: 20px; /* Tamaño de la fuente */
-  border-radius: 10px; /* Bordes redondeados */
-  --background: #ff00d4; /* Color de fondo del botón */
-  --color: white; /* Color del texto del botón */
-  margin: 0 10px; /* Margen entre los botones */
-}
+#map {
+  width: 100%; // Ancho completo
+  height: 500px; // Ajusta la altura como prefieras
+  border: 2px solid #007bff; // Borde del mapa
+  border-radius: 8px; // Bordes redondeados
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra para darle profundidad
+  transition: box-shadow 0.3s ease; // Efecto suave en la sombra
 
-/* Cambiar el color de fondo al pasar el mouse sobre los botones */
-.square-button:hover {
-  --background: #0056b3; /* Color de fondo al pasar el mouse */
+  // Efecto al pasar el mouse sobre el mapa
+  &:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); // Aumentar la sombra al pasar el mouse
+  }
 }

@@ -6,9 +6,13 @@ import {Router} from '@angular/router'
   styleUrls: ['./home-pasajero.component.scss'],
 })
 export class HomePasajeroComponent {
+  address : String=""; // Para almacenar la dirección
+
   @Output() cambiarSegmento = new EventEmitter<string>();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    
+  }
 
   solicitarViaje() {
         this.router.navigate(['/buscar-viaje']);

@@ -13,14 +13,19 @@
       <ion-card-title>Tu Ubicación</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <!-- Imagen de mapa de ejemplo -->
-      <ion-img src="assets/img/Home/MapsFake.png" alt="mapa"></ion-img>
+      <!-- Componente del mapa -->
+      <app-mapa></app-mapa>
+
+      <!-- Muestra la dirección aquí -->
+      <div *ngIf="address" class="address-container">
+        <strong>Dirección:</strong> {{ address }}
+      </div>
     </ion-card-content>
   </ion-card>
   
   <!-- Contenedor para los botones -->
   <div class="button-container">
-    <ion-button class="square-button" (click)="irAConductor()" >Conductor</ion-button>
+    <ion-button class="square-button" (click)="irAConductor()">Conductor</ion-button>
     <ion-button class="square-button" (click)="irAPasajero()">Pasajero</ion-button>
   </div>
 </ion-content>
