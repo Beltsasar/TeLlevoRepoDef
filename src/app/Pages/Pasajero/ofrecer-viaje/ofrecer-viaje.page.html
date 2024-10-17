@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ofrecer Destino</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Publica tu Destino</ion-card-title>
+      <p>Especifica a dónde vas, la hora y tu lugar de origen</p>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Campo para seleccionar destino -->
+      <ion-item>
+        <ion-label position="floating">Destino</ion-label>
+        <ion-input placeholder="Ingresa tu destino" [(ngModel)]="destino"></ion-input>
+      </ion-item>
+
+      <!-- Campo para seleccionar lugar de origen -->
+      <ion-item>
+        <ion-label position="floating">Elige tu sede</ion-label>
+        <ion-input placeholder="Ingresa el lugar de origen" [(ngModel)]="origen"></ion-input>
+      </ion-item>
+
+      <!-- Campo para seleccionar la hora de partida -->
+      <ion-item>
+        <ion-label position="floating">Hora de Partida</ion-label>
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="horaPartida"></ion-datetime>
+      </ion-item>
+
+      <!-- Campo para seleccionar la fecha de partida -->
+
+
+      <!-- Botón para publicar -->
+      <ion-button expand="block" (click)="publicarDestino()">
+        Publicar Destino
+      </ion-button>
+      <div class="mensaje-publicacion" *ngIf="mostrarMensaje">
+        <p>Destino Publicado</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mensaje de confirmación -->
+  <ion-card *ngIf="publicacionExitosa">
+    <ion-card-header color="success">
+      <ion-card-title>¡Destino Publicado!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Tu destino ha sido publicado. Espera ofertas de conductores.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

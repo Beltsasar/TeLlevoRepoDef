@@ -1,0 +1,7 @@
+me quede tratando de iniciar la base de datos
+ya esta en firebase/firestore iniciada
+ahora el problema es que register page no carga debido a un error de inyectar firebase en la pagina
+
+esta importado en app.module.ts de manera correcta
+
+en enviroments.ts estan las credenciales del proyecto 

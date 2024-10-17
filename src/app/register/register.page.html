@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Pasajeros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating" for="rut">RUT</ion-label>
+      <ion-input type="text" id="rut" name="rut" [(ngModel)]="nuevoPasajero.Rut" required></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Primer Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.PrimerNombre" name="primerNombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Primer Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.PrimerApellido" name="primerApellido" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Segundo Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.SegundoNombre" name="segundoNombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Segundo Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.SegundoApellido" name="segundoApellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="nuevoPasajero.FechaNacimiento" name="fechaNacimiento" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de Teléfono</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.NumeroTelefono" name="numeroTelefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="nuevoPasajero.CorreoElectronico" name="correoElectronico" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sede</ion-label>
+      <ion-select [(ngModel)]="selectedSede" name="sede">
+        <ion-select-option *ngFor="let sede of sedes" [value]="sede.nombre_sede">{{ sede.nombre_sede }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Registrar Pasajero</ion-button>
+  </form>
+</ion-content>

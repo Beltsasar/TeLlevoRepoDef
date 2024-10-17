@@ -9,37 +9,42 @@ import * as L from 'leaflet';
 export class MapaComponent implements AfterViewInit {
   private map: any;
 
-  constructor() {}
-
-  ngAfterViewInit(): void {
-    this.initMap();
-  }
-
   private initMap(): void {
-    // Inicializa el mapa en la ubicación deseada
-    this.map = L.map('map').setView([51.505, -0.09], 18); // Cambia 13 por un número mayor (18) para un zoom más cercano
+    const latitud = -33.4489;
+    const longitud = -70.6693;
+    const zoomLevel = 14;  // Nivel de zoom inicial
+
+    this.map = L.map('map').setView([latitud, longitud], zoomLevel);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors',
     }).addTo(this.map);
 
-    // Localiza la ubicación actual del usuario
-    this.map.locate({ setView: true, maxZoom: 16 });
+    const customIcon = L.icon({
+      iconUrl: 'assets/icon/marker-icon-2x.png', // Asegúrate de tener el archivo aquí
+      iconSize: [25, 41], // Tamaño del ícono
+      iconAnchor: [12, 41], // Punto donde se ancla el ícono
+      popupAnchor: [1, -34], // Punto donde se abre el popup
+      shadowUrl: 'assets/icon/marker-shadow.png', // Opcional, sombra del marcador
+      shadowSize: [41, 41], // Tamaño de la sombra
+    });
 
-    // Manejar el evento cuando se encuentra la ubicación
+    this.map.locate({ setView: false, maxZoom: 10 }); // SetView: false evita el ajuste automático del zoom
+
     this.map.on('locationfound', (e: any) => {
       const radius = e.accuracy / 2;
 
-      // Coloca un marcador en la ubicación del usuario
-      const marker = L.marker(e.latlng).addTo(this.map)
+      L.marker(e.latlng, { icon: customIcon }).addTo(this.map)
         .bindPopup(`You are within ${radius} meters from this point`).openPopup();
 
-      // Dibuja un círculo alrededor de la ubicación para representar la precisión
       L.circle(e.latlng, radius).addTo(this.map);
     });
 
-    // Manejar el evento si no se puede encontrar la ubicación
-    this.map.on('locationerror', (e: any) => {
+    this.map.on('locationerror', () => {
       alert('Location access denied.');
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.initMap();
   }
 }

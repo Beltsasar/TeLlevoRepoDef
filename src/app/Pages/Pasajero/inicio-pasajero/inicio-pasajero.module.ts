@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicioPasajeroPageRoutingModule } from './inicio-pasajero-routing.module';
 
 import { InicioPasajeroPage } from './inicio-pasajero.page';
+import { MostrarDestinoOfrecidoComponent } from 'src/app/Componentes/Detalles/Pasajero/mostrar-destino-ofrecido/mostrar-destino-ofrecido.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { InicioPasajeroPage } from './inicio-pasajero.page';
     IonicModule,
     InicioPasajeroPageRoutingModule
   ],
-  declarations: [InicioPasajeroPage]
+  declarations: [InicioPasajeroPage,MostrarDestinoOfrecidoComponent]
 })
 export class InicioPasajeroPageModule {}

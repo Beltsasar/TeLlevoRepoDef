@@ -7,11 +7,24 @@ import {Router} from '@angular/router'
 })
 export class HomePasajeroComponent {
   address : String=""; // Para almacenar la dirección
+  nombreUsuario: string = ''; // Variable para almacenar el nombre del usuario
 
   @Output() cambiarSegmento = new EventEmitter<string>();
 
   constructor(private router: Router) { 
     
+  }
+  ngOnInit() {
+    // Obtener el usuario autenticado desde el localStorage
+    const usuarioAutenticado = JSON.parse(localStorage.getItem('usuarioAutenticado') || '{}');
+
+    // Verificar si hay un nombre en el objeto del usuario
+    if (usuarioAutenticado && usuarioAutenticado.PrimerNombre) {
+      this.nombreUsuario = usuarioAutenticado.PrimerNombre;
+    } else {
+      console.log(usuarioAutenticado)
+      this.nombreUsuario = 'ERROR'; // Nombre por defecto si no se encuentra el usuario
+    }
   }
 
   solicitarViaje() {

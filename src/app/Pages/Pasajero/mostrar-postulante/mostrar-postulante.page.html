@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ver Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-container">
+    <ion-avatar class="profile-avatar">
+      <img src="/src/assets/img/3.jpg" alt="Foto de perfil">
+    </ion-avatar>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-text>{{ usuario.nombre }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email:</ion-label>
+          <ion-text>{{ usuario.email }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Teléfono:</ion-label>
+          <ion-text>{{ usuario.telefono }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dirección:</ion-label>
+          <ion-text>{{ usuario.direccion }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer>
+    <ion-button expand="full" color="secondary" (click)="volver()">
+      Volver
+    </ion-button>
+  </ion-footer>
+</ion-content>

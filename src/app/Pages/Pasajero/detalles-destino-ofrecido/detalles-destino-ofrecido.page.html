@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Destino</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio-pasajero"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles del Viaje</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Destino:</ion-label>
+        <ion-text>{{ destino }}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lugar de Origen:</ion-label>
+        <ion-text>{{ origen }}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hora de Partida:</ion-label>
+        <ion-text>{{ horaPartida }}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fecha de Partida:</ion-label>
+        <ion-text>{{ fechaPartida }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+  <app-mostrar-posibles-conductores></app-mostrar-posibles-conductores>
+</ion-content>

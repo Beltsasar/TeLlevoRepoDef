@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-ver-rutas',
@@ -34,8 +36,14 @@ export class VerRutasComponent  implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private ruter :Router) { }
 
   ngOnInit() {
+  }
+
+
+  VerDetalleRuta(){
+
+    this.ruter.navigate(['/mostra-detalles-ruta-c']);
   }
 }

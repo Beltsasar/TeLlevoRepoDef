@@ -12,6 +12,7 @@ import { HistorialComponent } from 'src/app/Componentes/General/historial/histor
 import { PerfilComponent } from 'src/app/Componentes/General/perfil/perfil.component';
 import { HomePasajeroComponent } from 'src/app/Componentes/General/home/home-pasajero.component';
 import { AjustesComponent } from 'src/app/Componentes/General/ajustes/ajustes.component';
+import { MapaComponent } from 'src/app/Componentes/General/mapa/mapa.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { AjustesComponent } from 'src/app/Componentes/General/ajustes/ajustes.co
     HistorialComponent,
     AjustesComponent,
     PerfilComponent,
-    HomePasajeroComponent]
+    HomePasajeroComponent,
+  MapaComponent]
 })
 export class IndexPageModule {}

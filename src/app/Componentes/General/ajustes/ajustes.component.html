@@ -29,10 +29,9 @@
     </ion-item>
 
     <!-- Botón de Cerrar Sesión -->
-    <ion-item>
-      <ion-icon slot="start" name="log-out-outline" [routerLink]="['/login']"></ion-icon>
-      <ion-label [routerLink]="['/login']">Cerrar Sesión </ion-label>
- 
+    <ion-item (click)="cerrarSesion()">
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      <ion-label>Cerrar Sesión</ion-label>
     </ion-item>
     <ion-item>
       <ion-icon slot="start" name="arrow-back-outline"[routerLink]="['/home']"></ion-icon>

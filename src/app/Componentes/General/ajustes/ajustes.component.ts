@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-ajustos',
   templateUrl: './ajustes.component.html',
@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjustesComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {}
+  cerrarSesion() {
+    localStorage.removeItem('usuarioAutenticado');
+    this.router.navigate(['/login']); // Redirigir al usuario a la página de inicio de sesión
+  }
 
 }

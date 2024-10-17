@@ -19,6 +19,6 @@ export class MostrarPosiblesConductoresComponent  implements OnInit {
   constructor(private router: Router) {}
 
   verDetalles() {
-    this.router.navigate(['/detalles-conductor', this.nombreConductor, this.rutConductor, this.sedeConductor]);
+    this.router.navigate(['/mostrar-postulante']);
   }
 }

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'index',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -24,15 +24,37 @@ const routes: Routes = [
     path: 'inicio-pasajero',
     loadChildren: () => import('./Pages/Pasajero/inicio-pasajero/inicio-pasajero.module').then( m => m.InicioPasajeroPageModule)
   },
-  {
-    path: 'form-ofrecer-ruta',
-    loadChildren: () => import('./Pages/Conductor/form-ofrecer-ruta/form-ofrecer-ruta.module').then( m => m.FormOfrecerRutaPageModule)
-  },
+
 
   {
     path: 'mostra-detalles-ruta-c',
     loadChildren: () => import('./Pages/Conductor/mostra-detalles-ruta-c/mostra-detalles-ruta-c.module').then( m => m.MostraDetallesRutaCPageModule)
-  }
+  },
+  {
+    path: 'ofrecer-viaje',
+    loadChildren: () => import('./Pages/Pasajero/ofrecer-viaje/ofrecer-viaje.module').then( m => m.OfrecerViajePageModule)
+  },
+  {
+    path: 'detalles-destino-ofrecido/:destino/:origen/:horaPartida/:fechaPartida',
+    loadChildren: () => import('./Pages/Pasajero/detalles-destino-ofrecido/detalles-destino-ofrecido.module').then(m => m.DetallesDestinoOfrecidoPageModule)
+  },
+  {
+    path: 'mostrar-postulante',
+    loadChildren: () => import('./Pages/Pasajero/mostrar-postulante/mostrar-postulante.module').then( m => m.MostrarPostulantePageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'register-conductor',
+    loadChildren: () => import('./register-conductor/register-conductor.module').then( m => m.RegisterConductorPageModule)
+  },
+
+
+
+
+
 
 ];
 
