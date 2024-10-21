@@ -1,51 +1,56 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import {Router} from '@angular/router'
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home-pasajero',
   templateUrl: './home-pasajero.component.html',
   styleUrls: ['./home-pasajero.component.scss'],
 })
 export class HomePasajeroComponent {
-  address : String=""; // Para almacenar la dirección
+  address: string = ''; // Para almacenar la dirección
   nombreUsuario: string = ''; // Variable para almacenar el nombre del usuario
-
   @Output() cambiarSegmento = new EventEmitter<string>();
 
-  constructor(private router: Router) { 
-    
-  }
-  ngOnInit() {
-    // Obtener el usuario autenticado desde el localStorage
-    const usuarioAutenticado = JSON.parse(localStorage.getItem('usuarioAutenticado') || '{}');
+  constructor(private router: Router) {}
 
-    // Verificar si hay un nombre en el objeto del usuario
-    if (usuarioAutenticado && usuarioAutenticado.PrimerNombre) {
-      this.nombreUsuario = usuarioAutenticado.PrimerNombre;
+  // Esta es una mejor práctica para manejar el localStorage
+  ngOnInit() {
+    this.obtenerUsuario(); // Llama a la función para obtener el usuario del localStorage
+  }
+
+  obtenerUsuario() {
+    const usuarioAutenticado = localStorage.getItem('usuarioAutenticado');
+    if (usuarioAutenticado) {
+      const usuario = JSON.parse(usuarioAutenticado);
+      this.nombreUsuario = this.capitalizarPrimeraLetra(usuario.nombre); // Capitaliza la primera letra del nombre
     } else {
-      console.log(usuarioAutenticado)
-      this.nombreUsuario = 'ERROR'; // Nombre por defecto si no se encuentra el usuario
+      console.log('No se encontró ningún usuario autenticado.');
     }
   }
-
+  capitalizarPrimeraLetra(nombre: string): string {
+    if (!nombre) return nombre; // Si el nombre está vacío, simplemente retorna
+    return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+  }
+  
+  
   solicitarViaje() {
-        this.router.navigate(['/buscar-viaje']);
+    this.router.navigate(['/buscar-viaje']);
     console.log('Solicitud de viaje enviada');
-    // Aquí podrías agregar la lógica para solicitar un viaje
   }
 
-
   irAPerfil() {
-    this.cambiarSegmento.emit('perfil'); 
+    this.cambiarSegmento.emit('perfil');
   }
 
   irAHistorial() {
-    this.cambiarSegmento.emit('historial'); 
-}
-irAConductor() {
-  this.router.navigate(['/inicio-conductor']); // Redirigir a la página de "Conductor"
-}
+    this.cambiarSegmento.emit('historial');
+  }
 
-irAPasajero() {
-  this.router.navigate(['/inicio-pasajero']); // Redirigir a la página de "Pasajero"
-}
+  irAConductor() {
+    this.router.navigate(['/inicio-conductor']); // Redirigir a la página de "Conductor"
+  }
+
+  irAPasajero() {
+    this.router.navigate(['/inicio-pasajero']); // Redirigir a la página de "Pasajero"
+  }
 }

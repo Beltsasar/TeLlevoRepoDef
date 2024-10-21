@@ -50,6 +50,15 @@ const routes: Routes = [
     path: 'register-conductor',
     loadChildren: () => import('./register-conductor/register-conductor.module').then( m => m.RegisterConductorPageModule)
   },
+  {
+    path: 'info-cuenta',
+    loadChildren: () => import('./Pages/General/info-cuenta/info-cuenta.module').then( m => m.InfoCuentaPageModule)
+  },
+  {
+    path: 'tomar-foto',
+    loadChildren: () => import('./Pages/General/tomar-foto/tomar-foto.module').then( m => m.TomarFotoPageModule)
+  },
+
 
 
 

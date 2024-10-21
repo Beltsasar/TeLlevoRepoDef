@@ -11,7 +11,6 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
   <div class="login-container">
     <div class="foto-container">
@@ -22,76 +21,63 @@
       alumnos que disponen de un vehiculo y puedan trasladar a alumnos que no 
       tengan como volver a  y necesiten trasladarse de vuelta a casa de manera segura y confiable.
     </p>
-      <form>
-        <ion-item>
-          <ion-label position="floating" class="custom-label">Correo</ion-label>
-          <ion-input
-            type="email"
-            placeholder="Ingresa tu correo"
-            name="email"
-            required
-            [(ngModel)]="Correo"
-            (keydown)="enterPresionado($event)"
+    <form>
+      <ion-item>
+        <ion-label position="floating" class="custom-label">Correo</ion-label>
+        <ion-input
+          type="email"
+          placeholder="Ingresa tu correo"
+          name="email"
+          required
+          [(ngModel)]="Correo"
+          (keydown)="enterPresionado($event)"
+        ></ion-input>
+      </ion-item>
 
-          ></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating" class="custom-label">Contraseña</ion-label>
+        <ion-input
+          placeholder="Ingresa tu Contraseña" 
+          type="password"
+          name="password"
+          required
+          [(ngModel)]="Contrasena"
+          (keydown)="enterPresionado($event)"
+        ><ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
 
-
-    <ion-item>
-
-      <ion-label position="floating" class="custom-label">Contraseña</ion-label>
-      <ion-input
-      placeholder="Ingresa tu Contraseña" 
-        type="password"
-        name="password"
-        required
-        [(ngModel)]="Contrasena"
-        (keydown)="enterPresionado($event)"
-      ><ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-    </ion-item>
-
-    <div class="ion-padding-top">
-      <ion-button (click)="validarDatos()">Entrar</ion-button>
-
-      <ion-button [routerLink]="['/register']">Registrate</ion-button>
-      <ion-button id="open-modal" (click)="setOpen(true)">Recuperar Contraseña</ion-button>
-
-
-    </div>
-  </form>
+      <div class="ion-padding-top">
+        <ion-button (click)="validarDatos()">Entrar</ion-button>
+        <ion-button [routerLink]="['/register']">Registrate</ion-button>
+        <ion-button id="open-modal" (click)="setOpen(true)">Recuperar Contraseña</ion-button>
+      </div>
+    </form>
   </div>
-
   <ion-modal [isOpen]="isModalOpen">
     <div class="registro-container">
       <ng-template>
-          <ion-header>
-            <ion-toolbar>
-              <div class="header">
-                <div class="logo-container">
-                  <ion-img src="../assets/img/logo.jpg" class="logo"></ion-img>
-                </div>
-                <h1 class="title">Te llevo</h1>
+        <ion-header>
+          <ion-toolbar>
+            <div class="header">
+              <div class="logo-container">
+                <ion-img src="../assets/img/logo.jpg" class="logo"></ion-img>
               </div>
-            </ion-toolbar>
-          </ion-header>
+              <h1 class="title">Te llevo</h1>
+            </div>
+          </ion-toolbar>
+        </ion-header>
         <ion-content class="ion-padding">
-          
-          
           <ion-input
-          type="email a recuperar"
-          fill="solid"
-          placeholder="Ingresa Correo Registrado"
-          placeholder="correo@registrado.cl"
-          labelPlacement="floating"
-          errorText="Invalid email"
-          ngModel
-          email >
-        
-        </ion-input>
+            type="email"
+            fill="solid"
+            placeholder="Ingresa Correo Registrado"
+            labelPlacement="floating"
+            errorText="Invalid email"
+            [(ngModel)]="CorreoRecuperacion" 
+          ></ion-input>
           <ion-button (click)="recuperarContra()">Recuperar contraseña</ion-button>
           <ion-button (click)="setOpen(false)">Volver</ion-button>
-          
         </ion-content>
       </ng-template>
     </div>

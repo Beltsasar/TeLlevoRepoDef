@@ -12,6 +12,7 @@ export class AjustesComponent  implements OnInit {
   ngOnInit() {}
   cerrarSesion() {
     localStorage.removeItem('usuarioAutenticado');
+
     this.router.navigate(['/login']); // Redirigir al usuario a la página de inicio de sesión
   }
 

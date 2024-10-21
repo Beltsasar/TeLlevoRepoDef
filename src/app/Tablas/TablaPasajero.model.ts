@@ -6,7 +6,7 @@ export interface TablaPasajero {
     SegundoApellido?: string; // Puede ser opcional si aplica
     FechaNacimiento: string;
     NumeroTelefono: string; // Cambiado de Int16Array a number
-    IdSede: number | null; // Cambiado de Int16Array a number
-    IdCarrera: number | null; // Cambiado de Int16Array a number
+    IdSede: number ; // Cambiado de Int16Array a number
     CorreoElectronico: string;
+    Contrasena : string
 }

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tomar Foto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <video #videoElement autoplay *ngIf="isCameraActive"></video>
+  <img *ngIf="image" [src]="image" />
+  
+  <div *ngIf="isCameraActive">
+    <ion-button (click)="takePicture()">Tomar Foto</ion-button>
+  </div>
+  
+  <div *ngIf="!isCameraActive">
+    <ion-button (click)="takeAnother()">Tomar Otra</ion-button>
+    <ion-button (click)="saveImage()">Quedarse con Esta Foto</ion-button>
+  </div>
+</ion-content>

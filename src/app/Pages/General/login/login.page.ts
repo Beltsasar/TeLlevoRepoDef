@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { ToastController } from '@ionic/angular'; 
 import { HttpClient } from '@angular/common/http';  // Importar HttpClient
-
+import { DatabaseService } from 'src/app/services/database.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -11,15 +11,19 @@ import { HttpClient } from '@angular/common/http';  // Importar HttpClient
 export class LoginPage {
   Correo: string = '';
   Contrasena: string = '';
+  Nombre: string = '';
+  CorreoRecuperacion: string = ''; // Campo para el correo de recuperación
 
   constructor(
+    private databaseService: DatabaseService,
+
     private router: Router,
     private toastController: ToastController,
     private http: HttpClient // Inyectar HttpClient
   ) {}
 
   ngOnInit() {
-    this.verificarSesion(); // Verificar sesión al iniciar el componente
+    this.verificarSesion();
   }
 
   enterPresionado(event: KeyboardEvent) {
@@ -36,26 +40,6 @@ export class LoginPage {
     }
   }
 
-  // Cambiar la validación para usar la base de datos
-  async validarDatos() {
-    this.http.post('http://localhost:3000/login', {
-      Correo: this.Correo,
-      Contrasena: this.Contrasena
-    }).subscribe(
-      async (response: any) => {
-        // Si el login es exitoso
-        if (response.message === 'Login exitoso') {
-          localStorage.setItem('usuarioAutenticado', JSON.stringify(response.usuario));
-          this.presentToast('Login exitoso');
-          this.router.navigate(['/index']);
-        }
-      },
-      async (error) => {
-        // Si el login falla
-        this.presentToast('Correo o contraseña incorrectos');
-      }
-    );
-  }
 
   async presentToast(message: string) {
     const toast = await this.toastController.create({
@@ -71,6 +55,45 @@ export class LoginPage {
     this.isModalOpen = isOpen;
   }
 
-  recuperarContra() {
-  }
+async validarDatos() {
+  this.http.post('http://localhost:3000/api/login', {
+    Correo: this.Correo,
+    Contrasena: this.Contrasena,
+  }).subscribe(
+    async (response: any) => {
+      // Si el login es exitoso
+      if (response.message === 'Login exitoso') {
+        const usuario = {
+          nombre: response.usuario.primer_nombre, // Asegúrate de que el campo coincida con el backend
+          correo: response.usuario.correo_electronico,  // Correo que también viene desde el servidor
+        };
+
+        localStorage.setItem('usuarioAutenticado', JSON.stringify(usuario));
+        this.presentToast('Login exitoso');
+        this.router.navigate(['/index']);
+      }
+    },
+    async (error) => {
+      if (error.status === 401) {
+        this.presentToast('Correo o contraseña incorrectos');
+      } else {
+        this.presentToast('Error en el servidor');
+      }
+    }
+  );
+}
+
+recuperarContra() {
+  this.databaseService.recuperarContrasena(this.CorreoRecuperacion).subscribe(
+    async (response) => {
+      console.log('Respuesta del servidor:', response); // Log para ver la respuesta
+      this.presentToast('se ha enviado el correo');
+    },
+    async (error) => {
+      console.error('Error al recuperar contraseña:', error); // Log para ver el error
+
+      this.presentToast('error al enviar el correo');
+    }
+  );
+}
 }
