@@ -1,0 +1,53 @@
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Variables de color */
+/*
+  --skyblue: #858FB4;
+  --paleblue: #CCD1DB;
+  --pink: #E87096;
+  --blush: #EBBAC2;
+  --yellow: #EDB240;
+  --white: #FFFFFF;
+*/
+
+ion-header, 
+ion-toolbar {
+  box-shadow: 0 2px 2px rgba(103, 103, 103, 0.2); /* Ajusta la sombra */
+}
+
+
+/* Estilo general para el contenido */
+ion-content {
+  --background: var(--paleblue); /* Fondo general del contenido */
+  font-family: 'Yusei Magic', sans-serif;/* Fuente principal */
+  color: var(--skyblue); /* Color del texto */
+}
+
+ion-title {
+    font-family: 'Yusei Magic', sans-serif;/* Fuente Pacifico */
+    color: #E87096; /* Color del título */
+    text-align: center;
+    margin: 5px 0; /* Espaciado superior e inferior */
+    font-size: 30px; /* Tamaño del texto */
+}
+
+ion-label h2 {
+    font-family: 'Yusei Magic', sans-serif;/* Fuente Pacifico */
+    color: #E87096; /* Color del título */
+    text-align: rigth;
+    margin: 2px 0; /* Espaciado superior e inferior */
+}
+ion-label p{
+    font-family: 'Yusei Magic', sans-serif;/* Fuente Pacifico */
+    color: #858FB4; /* Color del título */
+    text-align: rigth;
+    margin: 2px 0; /* Espaciado superior e inferior */
+}
+
+.custom-button {
+    --background: #E87096; /* Color de fondo rosa */
+    --color: #FFFFFF; /* Color del texto blanco */
+}
+

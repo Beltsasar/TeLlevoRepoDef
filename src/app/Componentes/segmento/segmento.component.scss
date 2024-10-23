@@ -1,0 +1,49 @@
+/* Estilo general para el ion-segment */
+:root {
+    --skyblue: #858FB4;
+    --paleblue: #CCD1DB;
+    --pink: #E87096;
+    --blush: #EBBAC2;
+    --yellow: #EDB240;
+  }
+  
+
+ion-segment {
+    --background: #858FB4; /* Fondo del segmento */
+    --border-radius: 3px; /* Borde redondeado */
+    --padding: 1px; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 20px 0; /* Margen superior e inferior */
+  }
+  
+  /* Estilo para los botones del ion-segment */
+  ion-segment-button {
+    --color-checked: #858FB4; /* Color del texto del botón seleccionado */
+    --background-checked:#ffffff; /* Fondo del botón seleccionado */
+    --color: #ffffff ; /* Color del texto no seleccionado */
+    --background: #858FB4; /* Fondo del botón no seleccionado */
+    font-family: 'Yusei Magic', sans-serif; /* Aplica la fuente Yusei Magic */
+    font-size: 18px; /* Tamaño del texto */
+    text-transform: none; /* No convierte el texto en mayúsculas */
+    padding: 5px; /* Espaciado interno */
+    margin: 0 5px; /* Espaciado entre los botones */
+    border-radius: 80px; /* Bordes redondeados de los botones */
+  }
+  
+  /* Estilo para el contenido segmentado (ng-container) */
+  ion-content {
+    --background: #F5F2F0; /* Fondo del contenido */
+    padding: 16px; /* Espaciado alrededor del contenido */
+  }
+  
+  /* Estilo adicional para el texto y elementos dentro del segmento */
+  ion-segment-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-segment-button.activated {
+    background-color: #858FB4; /* Fondo del botón activo */
+    color: #FFFFFF; /* Color del texto del botón activo */
+  }

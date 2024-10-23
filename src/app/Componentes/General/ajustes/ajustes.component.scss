@@ -1,0 +1,32 @@
+/* Estilo general para el contenido */
+ion-content {
+    --background: var(--paleblue); /* Fondo general del contenido */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente principal */
+    color: var(--skyblue); /* Color del texto */
+  }
+  
+  /* Estilo del título */
+  .title {
+      font-family: 'Yusei Magic', sans-serif; /* Fuente para el título */
+      color: #E87096; /* Color del título */
+      text-align: center; /* Centrado */
+      margin: 5px 0; /* Espaciado superior e inferior */
+      font-size: 25px; /* Tamaño del texto */
+  }
+  
+  /* Estilo de la lista */
+  .custom-list {
+    margin-top: 20px; /* Espaciado superior para la lista */
+  }
+  
+  /* Estilo para el texto de las etiquetas */
+  .custom-label {
+      font-family: 'Yusei Magic', sans-serif; /* Fuente para las etiquetas */
+      color: #858FB4; /* Color del texto de las etiquetas */
+  }
+  
+  /* Ajustes para los iconos en el ion-item */
+  ion-icon {
+      color: #E87096; /* Color para los iconos */
+  }
+  

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Variables de color */
+
+ion-header {
+    background-color: #E87096;/* Estilo para ion-title */
+    /* Fondo sky blue */
+}
+
+/* Cambiar el color de la flecha del botón atrás a blanco */
+ion-back-button {
+    --color: white; /* Cambia el color de la flecha a blanco */
+}
+
+
+/* Estilo para ion-title */
+ion-title {
+    background-color: #E87096; /* Fondo sky blue */
+    font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+    color: #ffffff; /* Texto en blanco para el título */
+    font-size: 24px; /* Tamaño de la fuente del título */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para ion-item */
+ion-item {
+    margin-bottom: 10px; /* Margen inferior para separar los items */
+    color: #E87096; /* Color de texto pink para los items */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+}
+
+/* Estilo para ion-label */
+ion-label {
+    font-weight: bold; /* Texto en negrita para las etiquetas */
+    color: #E87096; /* Color pink para las etiquetas */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+}
+
+/* Estilo para ion-input */
+ion-input {
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+    color:#858FB4; /* Color skyblue para los inputs */
+}
+
+/* Estilo para ion-button */
+ion-button {
+    background-color: #E87096; /* Fondo pink para el botón */
+    color: #FFFFFF; /* Texto en blanco */
+    font-family: 'Yusei Magic', sans-serif; /* Fuente Yusei Magic */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}

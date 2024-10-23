@@ -1,18 +1,83 @@
-:host {
-  display: block;
-  height: 100%; // Asegura que el componente ocupe toda la altura disponible
+/* Importación de las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* BARRA SUPERIOR */
+ion-toolbar {
+  --background: #858FB4; /* Color de fondo de la barra de herramientas */
 }
 
-#map {
-  width: 100%; // Ancho completo
-  height: 500px; // Ajusta la altura como prefieras
-  border: 2px solid #007bff; // Borde del mapa
-  border-radius: 8px; // Bordes redondeados
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra para darle profundidad
-  transition: box-shadow 0.3s ease; // Efecto suave en la sombra
+ion-title h1 {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color: #fff; /* Color del texto */
+  font-weight: 500; /* Grosor del texto */
+  font-size: 30px; /* Tamaño del texto */
+  margin-left: 10px; /* Espaciado a la izquierda */
+}
 
-  // Efecto al pasar el mouse sobre el mapa
-  &:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); // Aumentar la sombra al pasar el mouse
-  }
+/* CONTENIDO */
+ion-card-title {
+  color: #ffffff; /* Cambia esto al color que prefieras */
+  font-size: 20px; /* Opcional: ajusta el tamaño de la fuente */
+  font-family: 'Yusei Magic', sans-serif; /* Opcional: aplica la fuente */
+}
+
+
+/* TARJETA */
+ion-card {
+  --background: #F5F2F0; /* Color de fondo de la tarjeta (beige) */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+ion-card-header {
+  background-color: #E87096; /* Fondo del encabezado de la tarjeta (rosa) */
+  color: white; /* Texto en blanco */
+  font-family: 'Yusei Magic', sans-serif;
+  padding: 10px;
+  border-top-left-radius: 10px; /* Bordes superiores redondeados */
+  border-top-right-radius: 10px;
+}
+
+ion-card-title {
+  font-size: 20px; /* Tamaño del título */
+  font-weight: bold;
+  text-align: center;
+}
+
+.address-container {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #CCD1DB; /* Fondo Pale Blue */
+  border-radius: 5px;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 16px;
+}
+
+/* BOTONES */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; /* Margen superior para los botones */
+}
+
+ion-button.square-button {
+  --background: #E87096; /* Color de fondo del botón */
+  --border-radius: 0; /* Botones cuadrados */
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 18px;
+  width: 45%; /* Hacer que los botones ocupen menos del 50% del contenedor */
+  height: 50px; /* Altura de los botones */
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --color: #fff; /* Color del texto */
+  text-transform: none; /* No cambiar el texto a mayúsculas */
+}
+
+ion-button.square-button:hover {
+  --background: #EBBAC2; /* Cambia a un rosa más claro en hover */
+}
+app-mapa {
+    width: 100%; /* Ancho fijo */
+    height: 400px; /* Alto fijo */
+    display: block; /* Asegúrate de que el componente se comporte como un bloque */
 }

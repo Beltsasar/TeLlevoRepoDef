@@ -9,16 +9,18 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
     BrowserModule, 
     IonicModule.forRoot(), 
     AngularFireModule.initializeApp(environment.firebase), // Inicializa Firebase
     AngularFirestoreModule, // Importa Firestore
     AppRoutingModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
     HttpClientModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

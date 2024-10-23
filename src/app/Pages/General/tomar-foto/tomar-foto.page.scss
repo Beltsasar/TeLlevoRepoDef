@@ -1,27 +1,26 @@
 .camera-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 16px;
-  }
-  
-  .video-preview {
-    width: 100%; // Ajustar el ancho del video al 100%
-    height: auto; // Mantener la proporción del video
-    border: 2px solid #3880ff; // Borde opcional para el video
-    border-radius: 8px; // Bordes redondeados
-  }
-  
-  .button-container {
-    margin: 16px 0; // Espacio alrededor del botón
-  }
-  
-  .captured-image {
-    margin-top: 16px; // Espacio arriba de la imagen capturada
-    max-width: 100%; // Asegurarse de que la imagen no sobrepase el ancho de la pantalla
-    border: 2px solid #3880ff; // Borde opcional para la imagen
-    border-radius: 8px; // Bordes redondeados
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+}
+
+.video-preview {
+  width: 100%; // Ajustar el ancho del video al 100%
+  height: auto; // Mantener la proporción del video
+  border: 2px solid #3880ff; // Borde opcional para el video
+  border-radius: 8px; // Bordes redondeados
+}
+
+.button-container {
+  margin: 16px 0; // Espacio alrededor del botón
+}
+
+.captured-image {
+  margin-top: 16px; // Espacio arriba de la imagen capturada
+  max-width: 100%; // Asegurarse de que la imagen no sobrepase el ancho de la pantalla
+  border: 2px solid #3880ff; // Borde opcional para la imagen
+  border-radius: 8px; // Bordes redondeados
+}

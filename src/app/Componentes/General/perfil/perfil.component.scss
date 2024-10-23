@@ -1,80 +1,92 @@
-/* Fuentes */
+/* Importar las fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
-/* Header */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    background-color: #f8f8f8; /* Color de fondo del header */
+/* Variables de color */
+/* 
+  --skyblue: #858FB4;
+  --paleblue: #CCD1DB;
+  --pink: #E87096;
+  --blush: #EBBAC2;
+  --yellow: #EDB240;
+  --white: #FFFFFF;
+*/
+
+/* Estilo general para el contenido */
+ion-content {
+  --background: var(--paleblue); /* Fondo general del contenido */
+  font-family: 'Yusei Magic', sans-serif; /* Fuente principal */
+  color: var(--skyblue); /* Color del texto */
 }
 
-.logo-container {
-    margin-right: 8px; /* Espacio entre logo y título */
+h1 {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+  color: #E87096; /* Color del título */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo {
-    width: 50px; /* Ancho del logo */
-    height: auto; /* Mantener la relación de aspecto */
-}
-
-/* Título */
-.title {
-    font-family: 'Pacifico', cursive;
-    font-size: 24px; /* Tamaño del título */
-    color: #333; /* Color del texto del título */
-}
-
-/* Contenedor de Login */
+/* Estilo del contenedor de login */
 .login-container {
-    padding: 16px; /* Espaciado interno del contenedor */
-    text-align: center; /* Centrar el texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Estilo del Item de Perfil */
+/* Estilo del perfil */
 .profile-item {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Alinear verticalmente */
-    padding: 16px; /* Espaciado interno */
-    background-color: #ffffff; /* Color de fondo */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin-bottom: 16px; /* Espacio entre los items */
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  background-color: var(--blush); /* Fondo del perfil */
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de la Imagen de Perfil */
 .profile-avatar {
-    margin-right: 16px; /* Espacio entre la imagen y el texto */
-}
+    flex-grow: 1; /* Permite que el contenedor crezca */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 15px; 
+  }
+  
+  .profile-avatar img {
+    width: 80%; /* Ajusta al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px; 
+  }
+  
 
-.profile-avatar img {
-    width: 60px; /* Ancho de la imagen de perfil */
-    height: 60px; /* Altura de la imagen de perfil */
-    border-radius: 50%; /* Hacer la imagen circular */
-}
-
-/* Estilo de la Información del Perfil */
 ion-label h2 {
-    font-family: 'Yusei Magic', sans-serif; /* Fuente para el nombre */
-    font-size: 20px; /* Tamaño del nombre */
-    color: #555; /* Color del texto del nombre */
-    margin: 0; /* Eliminar margen por defecto */
+  font-size: 24px;
+  font-weight: bold;
+  color: #858FB4;
+  margin: 0;
+  font-family: 'Yusei Magic', sans-serif; 
 }
 
 ion-label p {
-    font-size: 14px; /* Tamaño del texto */
-    color: #777; /* Color del texto */
-    margin-top: 4px; /* Espacio superior */
+  color: #858FB4; /* Texto descriptivo del perfil */
+  margin: 5px 0 0;
+  line-height: 1.5;
+  font-family: 'Yusei Magic', sans-serif; 
 }
 
-/* Estilos para los Botones */
+/* Botón de cerrar sesión */
 ion-button {
-    margin-top: 12px; /* Espacio superior entre botones */
+  background-color: #858FB4; /* Fondo del botón */
+  color: #FFFFFF; /* Texto blanco */
+  font-weight: bold;
+  border-radius: 10px; /* Redondeo de esquinas del botón */
 }
 
-ion-button:hover {
-    background-color: #007bff; /* Color de fondo al pasar el mouse */
-    color: white; /* Color del texto al pasar el mouse */
+.custom-button {
+  --background: #E87096; /* Cambia este valor al color deseado */
+  --color: #ffffff; /* Cambia el color del texto si es necesario */
+  font-family: 'Yusei Magic', sans-serif; 
 }

@@ -8,5 +8,8 @@ export interface TablaPasajero {
     NumeroTelefono: string; // Cambiado de Int16Array a number
     IdSede: number ; // Cambiado de Int16Array a number
     CorreoElectronico: string;
-    Contrasena : string
+    Contrasena : string,
+    Imagen? : string,
+    Verificado :boolean,
+    descripcion: string
 }

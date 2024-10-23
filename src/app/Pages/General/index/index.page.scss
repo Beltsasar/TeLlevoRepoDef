@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* BARRA SUPERIOR */
+ion-toolbar {
+  --background: #E87096 ; /* Color de fondo de la barra de herramientas */
+  display: flex; /* Asegura que el contenido se distribuya en línea */
+  justify-content: start; /* Alinea el contenido al principio (izquierda) */
+  padding-left: 10px; /* Espaciado a la izquierda */
+}
+
+/* Alinear logo y título */
+.header {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el título */
+  width: 100%; /* Ocupa todo el ancho de la barra */
+}
+
+/* Contenedor del logo */
+.logo-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%; /* Redondea el contenedor */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+/* Imagen del logo */
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción de la imagen */
+}
+
+/* Estilo del título */
+.title {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
+  color: #fff; /* Color del texto */
+  font-size: 40px; /* Tamaño del texto */
+  margin-left: 15px; /* Espaciado entre el logo y el título */
+  white-space: nowrap; /* Evita que el texto se corte o salte de línea */
+}
+
+/* Asegurarse de que la barra se desplace */
+ion-header {
+  position: relative; /* Asegura que la barra se desplace con el contenido */
+}
+
+/* Asegurarse de que el contenido sea desplazable */
+ion-content {
+  position: relative; /* Evita el comportamiento de contenido fijo */
+}

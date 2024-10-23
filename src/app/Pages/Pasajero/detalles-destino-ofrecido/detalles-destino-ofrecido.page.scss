@@ -1,0 +1,70 @@
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Variables de color */
+:root {
+  --skyblue: #858FB4;
+  --paleblue: #CCD1DB;
+  --pink: #E87096;
+  --blush: #EBBAC2;
+  --yellow: #EDB240;
+  --white: #FFFFFF;
+}
+
+/* Estilo general para el contenido */
+ion-content {
+  --background: var(--paleblue); /* Fondo general del contenido */
+  font-family: 'Yusei Magic', sans-serif; /* Fuente principal */
+  color: var(--skyblue); /* Color del texto */
+}
+
+/* Estilo del encabezado */
+ion-header {
+  background-color: var(--blush); /* Fondo del encabezado */
+}
+
+/* Estilo del título en el encabezado */
+ion-title {
+  font-family: 'Yusei Magic', sans-serif; /* Fuente principal */
+  color: #E87096; /* Color del título */
+  text-align: center;
+  margin: 5px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilo de las tarjetas */
+.profile-card {
+  background-color: var(--white); /* Fondo de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px; /* Padding interno */
+  margin-bottom: 20px; /* Margen inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo de los items */
+ion-item {
+  margin-bottom: 10px; /* Margen inferior para separar los items */
+}
+
+ion-label {
+  font-weight: bold; /* Texto en negrita para las etiquetas */
+  color: #858FB4; /* Color del texto de la etiqueta */
+}
+
+/* Estilo para el contenido del texto */
+ion-text {
+  color: var(--skyblue); /* Color del texto */
+}
+
+/* Botón de acción */
+ion-button {
+  background-color: #E87096; /* Fondo del botón */
+  color: #FFFFFF; /* Texto blanco */
+  font-weight: bold;
+  border-radius: 10px; /* Redondeo de esquinas del botón */
+}
+
+/* Estilo adicional para el grid */
+ion-grid {
+  margin-top: 20px; /* Espaciado superior para el grid */
+}

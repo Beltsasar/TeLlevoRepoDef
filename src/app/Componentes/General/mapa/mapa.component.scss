@@ -1,19 +1,18 @@
 :host {
-    display: block;
-    height: 100%; // Asegura que el componente ocupe toda la altura disponible
+  display: block;
+  height: 100%; // Asegura que el componente ocupe toda la altura disponible
+}
+
+#map {
+  width: 100%px; // Ancho completo
+  height: 100%px; // Ajusta la altura según tus necesidades
+  border: 2px solid #007bff; // Borde del mapa
+  border-radius: 8px; // Bordes redondeados
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra para darle profundidad
+  transition: box-shadow 0.3s ease; // Efecto suave en la sombra
+
+  // Efecto al pasar el mouse sobre el mapa
+  &:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); // Aumentar la sombra al pasar el mouse
   }
-  
-  #map {
-    width: 100%px; // Ancho completo
-    height: 50px; // Ajusta la altura según tus necesidades
-    border: 2px solid #007bff; // Borde del mapa
-    border-radius: 8px; // Bordes redondeados
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra para darle profundidad
-    transition: box-shadow 0.3s ease; // Efecto suave en la sombra
-  
-    // Efecto al pasar el mouse sobre el mapa
-    &:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); // Aumentar la sombra al pasar el mouse
-    }
-  }
-  
+}

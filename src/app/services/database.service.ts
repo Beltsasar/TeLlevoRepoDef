@@ -19,12 +19,13 @@ recuperarContrasena(correo: string) {
   return this.http.post<any>(`${this.apiUrl}/recuperar-contrasena`, { correo });
 }
 
-
-addPasajero(pasajero: TablaPasajero): Observable<TablaPasajero> {
+addPasajero(pasajero: FormData): Observable<TablaPasajero> {
   return this.http.post<TablaPasajero>(`${this.apiUrl}/pasajeros`, pasajero);
 }
+updateUsuario(usuario: any): Observable<any> {
+  return this.http.put(`${this.apiUrl}/usuario/${usuario.id}`, usuario); // Cambia el endpoint según tu API
+}
 
-// Actualizar un pasajero existente
 updatePasajero(id: number, pasajero: TablaPasajero): Observable<TablaPasajero> {
   return this.http.put<TablaPasajero>(`${this.apiUrl}/pasajeros/${id}`, pasajero);
 }

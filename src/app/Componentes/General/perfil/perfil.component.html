@@ -1,37 +1,23 @@
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
-
-
-
 <ion-header>
   <ion-toolbar>
     <div class="header">
       <div class="logo-container">
-        <ion-img src="../assets/img/logo.jpg" class="logo"></ion-img>
       </div>
       <h1 class="title">Te llevo</h1>
     </div>
   </ion-toolbar>
 </ion-header>
 
-
-
-  <ion-content class="ion-padding">
-    <h1>esta informacion se mostrara al conductor cuando solicites viaje:</h1>
-    <div class="login-container">
-
-      <ion-item class="profile-item">
-        <!-- Imagen de perfil -->
-        <ion-avatar class="profile-avatar">
-          <img src="../assets/img/malcom.jfif" alt="Avatar del perfil">
-        </ion-avatar>
-      
-        <!-- Información del perfil -->
-        <ion-label>
-          <h2>Malcolm</h2>
-          <p>Hola, soy Malcolm.Puedo llevarte a casa desde DuocUC sede Alameda, horario vespertino </p>
-        </ion-label>
-      </ion-item>
+<ion-content class="ion-padding">
+  <h1>Esta información se mostrará al conductor cuando solicites viaje:</h1>
+  <div class="login-container">
+    <ion-item class="profile-item">
+      <img [src]="usuarioImagen" alt="Foto de Perfil" *ngIf="usuarioImagen" />
+      <ion-label>
+        <h2>Malcolm</h2> <!-- Cambia esto si quieres mostrar el nombre del usuario -->
+        <p><strong>Descripción:</strong> {{ descripcion }}</p>
+      </ion-label>
+    </ion-item>
   </div>
 
   <ion-button expand="block" [routerLink]="['/login']">

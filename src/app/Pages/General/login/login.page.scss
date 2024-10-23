@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 /* BARRA SUPERIOR */
-
+/* 858FB4 SKYBLUE/ CCD1DB  PALEBLUE / E87096 PINK / EBBAC2 BLUSH / EDB240 YELLOW / F5F2F0 BEIGE */
   
 ion-toolbar {
-  --background: #9CAFAA; /* Color de fondo de la barra de herramientas */
+  --background: #858FB4; /* Color de fondo de la barra de herramientas */
 }
 
 .title {
@@ -51,7 +51,7 @@ registro-container
 
 .title2 {
   font-family: 'Pacifico', cursive; /* Fuente Pacifico aplicada */
-  color:#9CAFAA; /* Color del texto */
+  color:#E87096; /* Color del texto */
   font-weight: 500; /* Ajusta el grosor si es necesario */
   font-size: 40px; /* Tamaño del texto */
   margin-left: 10px; /* Espaciado a la izquierda */
@@ -75,7 +75,7 @@ registro-container
   ion-button {
     width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
     margin-top: 16px; /* Espacio superior entre los botones */
-    --background: #EFBC9B;
+    --background: #E87096 ;
     --padding-start: 12px; /* Espaciado interno del botón */
     font-family: "Yusei Magic", sans-serif;
     font-size: 18px; /* Tamaño de la fuente en los botones */
@@ -84,8 +84,8 @@ registro-container
     
   ion-button:last-of-type {
     margin-top: 16px; /* Espacio superior más grande para el último botón */
-    --background: #EFBC9B; /* Color de fondo del botón */
-    --color: #fff; /* Color del texto del botón */
+    --background: #E87096 ; /* Color de fondo del botón */
+    --color: #ffffff; /* Color del texto del botón */
   }
   /* Estilo adicional para el contenedor del botón */
   div {
@@ -97,7 +97,7 @@ registro-container
     font-size: 1rem; /* Tamaño de la fuente */
     font-weight: 400; /* Grosor de la fuente */
     font-style: normal; /* Estilo de la fuente */
-    color: #e0b39c; /* Color del texto */
+    color: #858FB4 ; /* Color del texto */
     margin-bottom: 25px; /* Espacio inferior para mayor separación */
 }
 
@@ -107,7 +107,7 @@ registro-container
     font-size: 1.7rem; /* Tamaño de la fuente */
     font-weight: 400; /* Grosor de la fuente */
     font-style: normal; /* Estilo de la fuente */
-    color: #9CAFAA; /* Color del texto */
+    color: #E87096; /* Color del texto */
     margin-bottom: 25px; /* Espacio inferior para mayor separación */
   }
   ion-input {
@@ -121,12 +121,12 @@ registro-container
   
 
 .login-container {
-  background-color: #FBF3D5; /* Orange color */
+  background-color: #ac434317; /* Orange color */
   padding: 20px;
 }
 
 .ion-modal.registro-container {
-  background-color: #FBF3D5; /* Orange color */
+  background-color: #dcb424; /* Orange color */
   padding: 20px;
 }
 
@@ -158,13 +158,3 @@ registro-container
   }
 }
 
-.toast {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgba(56, 128, 255, 0.9);
-  color: rgb(184, 20, 20);
-  font-size: 16px;
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}

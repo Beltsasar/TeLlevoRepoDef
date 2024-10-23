@@ -1,4 +1,91 @@
-.image {
-    width: 100px;
-    height: 100px; /* Cambia la altura según tus necesidades */
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Variables de color */
+:root {
+  --skyblue: #858FB4;
+  --paleblue: #CCD1DB;
+  --pink: #E87096;
+  --blush: #EBBAC2;
+  --yellow: #EDB240;
+  --white: #FFFFFF;
 }
+
+/* Estilo general para el contenido */
+ion-content {
+  --background: var(--paleblue); /* Fondo general del contenido */
+  font-family: 'Yusei Magic', sans-serif; /* Fuente principal */
+  color: var(--skyblue); /* Color del texto */
+}
+
+h1 {
+  font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+  color: #E87096; /* Color del título */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo del perfil */
+.profile-card {
+  background-color: var(--blush); /* Fondo de la tarjeta de perfil */
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Elementos del perfil */
+.profile-item {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+.profile-avatar {
+  flex-grow: 1; /* Permite que el contenedor crezca */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-right: 15px; 
+}
+  
+.profile-avatar img {
+  width: 80%; /* Ajusta al 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 5px; 
+}
+  
+ion-label h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #858FB4;
+  margin: 0;
+  font-family: 'Yusei Magic', sans-serif; 
+}
+
+ion-label p {
+  color: #858FB4; /* Texto descriptivo del perfil */
+  margin: 5px 0 0;
+  line-height: 1.5;
+  font-family: 'Yusei Magic', sans-serif; 
+}
+
+
+
+/* Estilo del botón personalizado */
+.custom-button {
+  --background: #E87096; /* Cambia este valor al color deseado */
+  --color: #ffffff; /* Cambia el color del texto si es necesario */
+  font-family: 'Yusei Magic', sans-serif; 
+}
+
+

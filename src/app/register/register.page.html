@@ -61,8 +61,13 @@
         <ion-select-option *ngFor="let sede of sedes" [value]="sede.id_sede">{{ sede.nombre_sede }}</ion-select-option>
       </ion-select>
     </ion-item>
-    
 
+    <ion-button [routerLink]="['/tomar-foto']">Tomar Foto</ion-button>
+
+    
+    <div *ngIf="capturedImage">
+      <img [src]="capturedImage" alt="Imagen capturada" />
+    </div>
     <ion-button expand="full" type="submit">Registrar Pasajero</ion-button>
   </form>
 </ion-content>
