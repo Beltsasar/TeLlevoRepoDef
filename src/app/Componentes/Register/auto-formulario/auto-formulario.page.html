@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="register-s" (click)="Volver()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Auto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()" #autoForm="ngForm">
+    
+    <!-- Patente -->
+    <ion-item>
+      <ion-label>Patente</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoauto.patente" name="patente" required></ion-input>
+    </ion-item>
+
+    <!-- Modelo del Auto -->
+    <ion-item>
+      <ion-label>Modelo</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoauto.modelo_auto" name="modelo_auto" required></ion-input>
+    </ion-item>
+
+    <!-- Año del Auto -->
+    <ion-item>
+      <ion-label>Año</ion-label>
+      <ion-input type="number" [(ngModel)]="nuevoauto.ano_auto" name="ano_auto" required></ion-input>
+    </ion-item>
+
+    <!-- Capacidad de Pasajeros -->
+    <ion-item>
+      <ion-label>Capacidad Pasajeros</ion-label>
+      <ion-input type="number" [(ngModel)]="nuevoauto.CapacidadPasajeros" name="CapacidadPasajeros" required></ion-input>
+    </ion-item>
+
+ 
+
+    <!-- ID Tipo Auto -->
+    <ion-item>
+      <ion-label>Auto</ion-label>
+      <ion-select [(ngModel)]="nuevoauto.id_tipoAuto" (ionChange)="onAutoChange($event)" name="auto" required>
+        <ion-select-option *ngFor="let tipo of tiposAuto" [value]="tipo.id_tipoauto">{{ tipo.tipoAuto }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!autoForm.form.valid">Registrar Auto</ion-button>
+  </form>
+</ion-content>

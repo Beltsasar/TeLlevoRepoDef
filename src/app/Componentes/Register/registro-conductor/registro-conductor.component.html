@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-list>
+
+      <!-- Campo para el RUT -->
+      <ion-item>
+        <ion-label position="floating">RUT</ion-label>
+        <ion-input type="text" [(ngModel)]="RutForm" name="RutForm" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Primer Nombre -->
+      <ion-item>
+        <ion-label position="floating">Primer Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoConductor.PrimerNombre" name="primerNombre" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Primer Apellido -->
+      <ion-item>
+        <ion-label position="floating">Primer Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoConductor.PrimerApellido" name="primerApellido" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Segundo Nombre -->
+      <ion-item>
+        <ion-label position="floating">Segundo Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoConductor.SegundoNombre" name="segundoNombre"></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Segundo Apellido -->
+      <ion-item>
+        <ion-label position="floating">Segundo Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoConductor.SegundoApellido" name="segundoApellido"></ion-input>
+      </ion-item>
+
+      <!-- Campo para la Fecha de Nacimiento -->
+      <ion-item>
+        <ion-label position="floating">Fecha de Nacimiento</ion-label>
+        <ion-input type="date" [(ngModel)]="nuevoConductor.FechaNacimiento" name="fechaNacimiento" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Número de Teléfono -->
+      <ion-item>
+        <ion-label position="floating">Número de Teléfono</ion-label>
+        <ion-input type="tel" [(ngModel)]="nuevoConductor.NumeroTelefono" name="numeroTelefono" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Correo Electrónico -->
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="nuevoConductor.CorreoElectronico" name="correoElectronico" required></ion-input>
+      </ion-item>
+
+      <!-- Selección de Sede -->
+      <ion-item>
+        <ion-label>Sede</ion-label>
+        <ion-select (ionChange)="onSedeChange($event)" name="sede" required>
+          <ion-select-option *ngFor="let sede of sedes" [value]="sede.id_sede">{{ sede.nombre_sede }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Campo para la Contraseña -->
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="nuevoConductor.Contrasena" name="contrasena" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para la Descripción -->
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoConductor.descripcion" name="descripcion"></ion-input>
+      </ion-item>
+
+      <!-- Campo para el Auto -->
+
+      <!-- Mostrar la imagen capturada -->
+      <ion-item *ngIf="capturedImage">
+        <img [src]="capturedImage" alt="Imagen capturada" style="max-width: 100%; max-height: 200px;"/>
+      </ion-item>
+
+      <!-- Botón para capturar imagen -->
+      <ion-item>
+        <ion-button [routerLink]="['/tomar-foto']">Capturar Imagen</ion-button>
+      </ion-item>
+
+      <!-- Botón de enviar -->
+      <ion-item>
+        <ion-button expand="full" type="submit" >Siguiente-></ion-button>
+      </ion-item>
+
+    </ion-list>
+  </form>
+</ion-content>

@@ -1,0 +1,15 @@
+<!-- segmento-register.component.html -->
+<ion-content>
+  <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="Conductor" (click)="cambiarSegmento('Conductor')">Conductor</ion-segment-button>
+    <ion-segment-button value="Pasajero" (click)="cambiarSegmento('Pasajero')">Pasajero</ion-segment-button>
+  </ion-segment>
+
+  <ng-container *ngIf="selectedSegment === 'Conductor'">
+    <app-registro-conductor></app-registro-conductor>
+  </ng-container>
+
+  <ng-container *ngIf="selectedSegment === 'Pasajero'">
+    <app-registro-pasajero></app-registro-pasajero>
+  </ng-container>
+</ion-content>

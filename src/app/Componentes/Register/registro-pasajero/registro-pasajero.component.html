@@ -1,0 +1,62 @@
+
+  <form (ngSubmit)="onSubmit()" >
+    <ion-item>
+      <ion-label position="floating" for="rut">RUT</ion-label>
+      <ion-input type="text" id="rut" name="Rut" [(ngModel)]="nuevoPasajero.Rut" (ngModelChange)="validarFormulario()" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Primer Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.PrimerNombre" name="primerNombre"  (ngModelChange)="validarFormulario()"required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Primer Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.PrimerApellido" name="primerApellido" (ngModelChange)="validarFormulario()" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Segundo Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.SegundoNombre" name="segundoNombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Segundo Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.SegundoApellido" name="segundoApellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="nuevoPasajero.FechaNacimiento" name="fechaNacimiento" (ngModelChange)="validarFormulario()"required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de Teléfono</ion-label>
+      <ion-input type="text" [(ngModel)]="nuevoPasajero.NumeroTelefono" name="numeroTelefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="nuevoPasajero.CorreoElectronico" name="correoElectronico" (ngModelChange)="validarFormulario()" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="nuevoPasajero.Contrasena" name="Contrasena" (ngModelChange)="validarFormulario()" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sede</ion-label>
+      <ion-select [(ngModel)]="selectedSede" name="sede" (ionChange)="onSedeChange($event)">
+        <ion-select-option *ngFor="let sede of sedes" [value]="sede.id_sede">{{ sede.nombre_sede }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button class="custom-button" [routerLink]="['/tomar-foto']">Tomar Foto</ion-button>
+
+    
+    <div *ngIf="capturedImage">
+      <img [src]="capturedImage" alt="Imagen capturada" />
+    </div>
+    <ion-button expand="full" type="submit">Registrar Pasajero</ion-button>
+  </form>
