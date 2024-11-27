@@ -1,7 +1,2 @@
-me quede tratando de iniciar la base de datos
-ya esta en firebase/firestore iniciada
-ahora el problema es que register page no carga debido a un error de inyectar firebase en la pagina
-
-esta importado en app.module.ts de manera correcta
-
-en enviroments.ts estan las credenciales del proyecto 
+despues de tanto, subi el proyecto a github, tiene google maps y registro de conductor, auto y pasajero
+faltan css y algunas validaciones, pero la estructura principal esta completa
